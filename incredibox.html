@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IncrediBox - Create Music with Beat-Making Game Collection</title>
+    <meta name="description" content="Play different versions of IncrediBox, the award-winning music creation game. Mix beats, create music and have fun with multiple game versions!">
+    <link rel="canonical" href="https://incredibox.tech">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --apple-blue: #007AFF;
+            --apple-dark: #1D1D1F;
+            --apple-gray: #86868B;
+            --apple-light: #F5F5F7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .game-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            margin: 2rem 0;
+        }
+
+        .game-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white/80 backdrop-blur-md fixed w-full z-50 shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <a href="/" class="text-2xl font-bold text-blue-600">IncrediBox</a>
+                
+                <div class="flex items-center space-x-6">
+                    <div class="relative group">
+                        <button class="px-4 py-2 text-gray-700 hover:text-blue-600">
+                            Game Versions
+                            <svg class="w-4 h-4 inline-block ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-lg mt-2">
+                            <a href="#version1" class="block px-4 py-2 hover:bg-blue-50">Sprunki Version</a>
+                            <a href="#version2" class="block px-4 py-2 hover:bg-blue-50">Abgerny Version</a>
+                            <a href="#version3" class="block px-4 py-2 hover:bg-blue-50">Sprunki Retake</a>
+                        </div>
+                    </div>
+                    
+                    <div class="relative">
+                        <input type="search" 
+                               placeholder="Search games..." 
+                               class="w-64 px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="pt-32 pb-20 bg-gradient-to-b from-white to-gray-50">
+        <div class="container mx-auto px-4">
+            <h1 class="text-5xl md:text-6xl font-bold text-center mb-8 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Welcome to IncrediBox
+            </h1>
+            <p class="text-xl text-gray-600 text-center max-w-3xl mx-auto">
+                Create amazing music with our collection of beat-making games. Mix, match, and discover unique sound combinations across different versions.
+            </p>
+        </div>
+    </header>
+
+    <!-- Game Template Section -->
+    <main class="container mx-auto px-4 py-12">
+        <!-- Version 1 -->
+        <section id="version1" class="mb-20">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">IncrediBox Sprunki</h2>
+            <p class="text-gray-600 mb-6">
+                Experience the classic beat-making gameplay with Sprunki version. Create amazing music combinations with unique sound elements.
+            </p>
+            <div class="game-container">
+                <iframe src="https://www.gameflare.com/embed/incredibox-sprunki/" allow="fullscreen" title="IncrediBox Sprunki"></iframe>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm mt-6">
+                <h3 class="text-xl font-semibold mb-4">How to Play</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>Click and drag characters to the stage</li>
+                    <li>Each character represents a unique sound</li>
+                    <li>Mix different sounds to create your music</li>
+                    <li>Record and share your creations</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Version 2 -->
+        <section id="version2" class="mb-20">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">IncrediBox Abgerny</h2>
+            <p class="text-gray-600 mb-6">
+                Discover new sounds and beats with the Abgerny version. Create unique musical compositions with enhanced features.
+            </p>
+            <div class="game-container">
+                <iframe src="https://www.gameflare.com/embed/incredibox-abgerny/" allow="fullscreen" title="IncrediBox Abgerny"></iframe>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm mt-6">
+                <h3 class="text-xl font-semibold mb-4">Game Features</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>New sound elements and characters</li>
+                    <li>Enhanced mixing capabilities</li>
+                    <li>Improved visual effects</li>
+                    <li>Additional bonus content</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Version 3 -->
+        <section id="version3" class="mb-20">
+            <h2 class="text-3xl font-bold text-blue-600 mb-4">Sprunki Retake</h2>
+            <p class="text-gray-600 mb-6">
+                Experience the reimagined version of Sprunki with new elements and enhanced gameplay mechanics.
+            </p>
+            <div class="game-container">
+                <iframe src="https://www.gameflare.com/embed/sprunki-retake-human-new/" allow="fullscreen" title="Sprunki Retake"></iframe>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-sm mt-6">
+                <h3 class="text-xl font-semibold mb-4">What's New</h3>
+                <ul class="list-disc list-inside text-gray-600 space-y-2">
+                    <li>Redesigned interface</li>
+                    <li>New sound combinations</li>
+                    <li>Advanced recording features</li>
+                    <li>Improved performance</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">About IncrediBox</h3>
+                    <p class="text-gray-400">
+                        An award-winning music creation game that lets you create unique beats and melodies through an intuitive interface.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#version1" class="text-gray-400 hover:text-white">Sprunki Version</a></li>
+                        <li><a href="#version2" class="text-gray-400 hover:text-white">Abgerny Version</a></li>
+                        <li><a href="#version3" class="text-gray-400 hover:text-white">Sprunki Retake</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Stay Updated</h3>
+                    <form class="space-y-4">
+                        <input type="email" 
+                               placeholder="Enter your email" 
+                               class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:border-blue-500">
+                        <button class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                <p>© 2024 IncrediBox.tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
